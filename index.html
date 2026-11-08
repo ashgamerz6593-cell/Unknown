@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sun</title>
+<style>
+  body {
+    background: linear-gradient(to bottom, #000000, #0a0a2a);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+  }
+
+  .title {
+    color: #ffdd00;
+    font-size: 48px;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #ffaa00, 0 0 30px #ff5500;
+    animation: flicker 2s infinite alternate;
+  }
+
+  @keyframes flicker {
+    from { opacity: 0.8; text-shadow: 0 0 15px #ffaa00; }
+    to { opacity: 1; text-shadow: 0 0 25px #ffff00, 0 0 40px #ff5500; }
+  }
+
+  .sun {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff700 0%, #ffaa00 40%, #ff5500 70%, transparent 100%);
+    box-shadow: 0 0 60px #ffaa00, 0 0 120px #ff5500, 0 0 200px #ff3300;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 60px #ffaa00, 0 0 120px #ff5500; }
+    to { box-shadow: 0 0 90px #ffff00, 0 0 160px #ffaa00, 0 0 240px #ff5500; }
+  }
+
+  .quote {
+    margin-top: 40px;
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 0 10px #00f0ff;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="title">SUN</div>
+  <div class="sun"></div>
+  <div class="quote">Something that can brighten your day</div>
+</body>
+</html>
